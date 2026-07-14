@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dropdown Component</title>
+    <meta name="description" content="A simple custom dropdown component.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="logo-group">
+            <h1>Select</h1>
+            <span class="badge">COMPONENT</span>
+        </div>
+        <button id="theme-toggle" class="btn-toggle" aria-label="Toggle Dark Mode">DARK</button>
+    </header>
+
+    <main class="app-container">
+        <div class="dropdown" id="custom-dropdown">
+            <label id="dropdown-label" class="dropdown-label">Select Workspace Framework</label>
+
+            <button
+            type="button"
+            id="dropdown-trigger"
+            class="dropdown-trigger"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="dropdown-label dropdown-trigger"
+            >
+                <span id="dropdown-value">Choose an option...</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+
+            <ul id="dropdown-menu" class="dropdown-menu" role="listbox" aria-labelledby="dropdown-label" tabindex="-1">
+                <li class="dropdown-item" role="option" data-value="react" aria-selected="false">ReactJS</li>
+                <li class="dropdown-item" role="option" data-value="vue" aria-selected="false">Vue.js</li>
+                <li class="dropdown-item" role="option" data-value="angular" aria-selected="false">Angular</li>
+                <li class="dropdown-item" role="option" data-value="svelte" aria-selected="false">Svelte</li>
+                <li class="dropdown-item" role="option" data-value="solid" aria-selected="false">SolidJS</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 HTML, CSS & Javascript Project. For personal use only.</p>
+        <p class="credit-text">Inspired by the roadmap.sh component engineering tracks.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
